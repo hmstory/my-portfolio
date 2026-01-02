@@ -3,15 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/my-portfolio/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
     <title>my-website</title>
-    <script type="module" crossorigin src="/my-portfolio/assets/index-DmYNJnuy.js"></script>
+    <style>
+      /* 초기 로딩 스타일 - 모바일 Safari에서 깜빡임 방지 */
+      body {
+        margin: 0;
+        padding: 0;
+        background: #0a0a0f;
+        color: #e4e4e7;
+      }
+      #root {
+        min-height: 100vh;
+      }
+      /* 로딩 중 표시 */
+      #root:empty::before {
+        content: "Loading...";
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        color: #a1a1aa;
+        font-family: system-ui, -apple-system, sans-serif;
+      }
+    </style>
+    <script type="module" crossorigin src="/my-portfolio/assets/index-Dyq20ldd.js"></script>
     <link rel="stylesheet" crossorigin href="/my-portfolio/assets/index-BmUVGWDV.css">
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      <div style="padding: 2rem; text-align: center; background: #0a0a0f; color: #e4e4e7; min-height: 100vh; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+        <h1>JavaScript가 필요합니다</h1>
+        <p>이 웹사이트를 사용하려면 JavaScript를 활성화해주세요.</p>
+      </div>
+    </noscript>
   </body>
 </html>
