@@ -11,25 +11,42 @@
     <meta name="mobile-web-app-capable" content="yes" />
     <title>my-website</title>
     <style>
-      /* 초기 스타일 - 모바일 Safari에서 깜빡임 방지 */
-      body {
+      /* 초기 스타일 - 모바일 Safari에서 깜빡임 방지 및 즉시 표시 */
+      * {
+        box-sizing: border-box;
+      }
+      html, body {
         margin: 0;
         padding: 0;
+        width: 100%;
+        height: 100%;
         background: #0a0a0f;
         color: #e4e4e7;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
       }
       #root {
         min-height: 100vh;
+        width: 100%;
+        background: #0a0a0f;
+        opacity: 1;
+        visibility: visible;
+      }
+      /* React 로드 전에도 콘텐츠가 보이도록 */
+      #root:empty::before {
+        content: '';
+        display: block;
+        min-height: 100vh;
+        background: #0a0a0f;
       }
     </style>
-    <!-- 모바일 최적화: DNS 프리페치 -->
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <!-- 모바일 최적화: DNS 프리페치 제거 (Safari 프라이버시 보호로 차단될 수 있음) -->
     <!-- 모바일 성능 최적화 -->
     <meta name="theme-color" content="#0a0a0f">
     <meta name="msapplication-TileColor" content="#0a0a0f">
-    <script type="module" crossorigin src="/my-portfolio/assets/index-B_uqobag.js"></script>
-    <link rel="stylesheet" crossorigin href="/my-portfolio/assets/index-BNSmt_js.css">
+    <script type="module" crossorigin src="/my-portfolio/assets/index-B4cFOPlT.js"></script>
+    <link rel="stylesheet" crossorigin href="/my-portfolio/assets/index-MRawZ1PP.css">
   </head>
   <body>
     <div id="root"></div>
